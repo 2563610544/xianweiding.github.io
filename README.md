@@ -1,4 +1,4 @@
-![个人照片](photo.jpg)  <!-- 替换为你的照片路径，支持网络图片URL -->
+![个人照片](https://github.com/2563610544/xianweiding.github.io/raw/802d590e7fe03000732278fbc7ce4902b97a73f3/sample-figure2.png)  <!-- 替换为你的照片路径，支持网络图片URL -->
 
 # 你的姓名  
 **Professor**  
