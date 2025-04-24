@@ -1,149 +1,221 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lixiang Xu | 学术主页</title>
+    <title>传统文化商城</title>
     <style>
-        /* 基础样式（响应式+简洁） */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
         body {
-            font-family: 'Segoe UI', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
+            background-color: #f9f4ed;
         }
-
-        h1,
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
-        }
-
-        .section {
-            margin: 30px 0;
-        }
-
-        .contact {
-            margin: 15px 0;
-            font-size: 1.1em;
+        /* 顶部搜索栏 */
+        .header {
+            background: #de2910;
+            padding: 12px 16px;
             display: flex;
             align-items: center;
+            gap: 10px;
         }
-
-        .contact img {
-            margin-right: 20px;
-            max-width: 150px;
-            height: auto;
+        .search-bar {
+            flex: 1;
+            height: 40px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
         }
-
-        .publication {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #eee;
-            border-radius: 5px;
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
         }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
+        /* 功能图标区 */
+        .icon-section {
+            background: white;
+            padding: 16px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
         }
-
-        a:hover {
-            text-decoration: underline;
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
         }
-
-        /* 移动端适配 */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .contact {
-                flex-direction: column;
-            }
-
-            .contact img {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-
-            .publication {
-                padding: 10px;
-            }
+        .icon-item img {
+            width: 50px;
+            height: 50px;
+        }
+        /* 活动板块 */
+        .activity-block {
+            background: white;
+            margin: 12px 0;
+        }
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            padding: 16px 0;
+        }
+        .activity-card {
+            min-width: 200px;
+            height: 240px;
+            margin: 0 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 16px;
+        }
+        /* 商品展示区 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 12px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .product-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
         }
     </style>
 </head>
-
 <body>
-    <!-- 头部信息 -->
-    <h1>Lixiang Xu</h1>
-    <div class="contact">
-        <!-- 请替换为有效的图片链接，并添加 alt 属性 -->
-        <img src="https://github.com/2563610544/xianweiding.github.io/raw/0122dbcbb944e7958fc2d878dd79079dc7d3db70/figure1.png" alt="个人照片" />
-        <div>
-            <p>教授<br>合肥大学<br>人工智能与大数据学院 Email: xlxiang@ustc.edu.cn</p>
-            <p>
-                <a href="https://github.com/your-github" target="_blank">GitHub</a> |
-                <a href="https://scholar.google.com/citations?user=your-id" target="_blank">Google Scholar</a> |
-                <a href="https://dblp.org/pid/your-id" target="_blank">DBLP</a>
-            </p>
+    <!-- 顶部搜索栏 -->
+    <div class="header">
+        <img src="https://via.placeholder.com/24" alt="菜单图标">
+        <div class="search-bar">
+            <img src="https://via.placeholder.com/20" alt="搜索图标">
+            <input type="text" placeholder="搜索传统文化好物">
+        </div>
+        <img src="https://via.placeholder.com/24" alt="相机图标">
+        <button style="background: #ff9900; color: white; border: none; padding: 8px 16px; border-radius: 20px;">搜索</button>
+    </div>
+
+    <!-- 功能图标区 -->
+    <div class="icon-section">
+        <div class="icon-item">
+            <img src="https://source.unsplash.com/50x50/?hanfu" alt="汉服">
+            <span>传统汉服</span>
+        </div>
+        <div class="icon-item">
+            <img src="https://source.unsplash.com/50x50/?paper-cutting" alt="剪纸">
+            <span>非遗剪纸</span>
+        </div>
+        <div class="icon-item">
+            <img src="https://source.unsplash.com/50x50/?tea-set" alt="茶艺">
+            <span>古韵茶艺</span>
+        </div>
+        <div class="icon-item">
+            <img src="https://source.unsplash.com/50x50/?writing-brush" alt="文房四宝">
+            <span>文房四宝</span>
+        </div>
+        <div class="icon-item">
+            <img src="https://source.unsplash.com/50x50/?traditional-musical-instrument" alt="传统乐器">
+            <span>传统乐器</span>
+        </div>
+        <div class="icon-item">
+            <img src="https://source.unsplash.com/50x50/?embroidery" alt="刺绣">
+            <span>精美刺绣</span>
         </div>
     </div>
 
-    <!-- 研究方向 -->
-    <h2>🏷 About Me</h2>
-    <p>
-        主要研究方向：深度学习驱动的视频与图像处理、多模态感知计算、算法优化。聚焦于通过图神经网络和自监督学习解决复杂场景下的视觉感知问题。
-    </p>
-
-    <!-- 最新动态 -->
-    <h2>📌 Recent News</h2>
-    <ul>
-        <li>2025年3月：论文《融合骨架大核算子和全局上下文信息的图卷积网络》被《中国图象图形学报》接收。</li>
-        <li>2025年2月：担任 IEEE T-PAMI 期刊审稿人。</li>
-    </ul>
-
-    <!-- 精选论文 -->
-    <h2>📖 Selected Publications</h2>
-    <div class="publication">
-        <strong>Local and global self-attention enhanced graph convolutional network for skeleton-based action recognition</strong><br>
-        <em>Pattern Recognition, 2025, 159: 111106</em><br>
-        <!-- 请替换为真实的论文链接和代码链接 -->
-        <a href="paper-url" target="_blank">Paper</a> | <a href="code-url" target="_blank">Code</a>
+    <!-- 活动滚动区 -->
+    <div class="activity-block">
+        <div class="horizontal-scroll">
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1598646856924-44d7d72a9a4a?w=300" alt="非遗直播" style="width: 200px; height: 180px; object-fit: cover;">
+                <h4>非遗文化直播</h4>
+                <p>手艺人现场展示传统技艺</p>
+            </div>
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1586876039842-07e9c570f4a1?w=300" alt="节日特惠" style="width: 200px; height: 180px; object-fit: cover;">
+                <h4>传统节日特惠</h4>
+                <p>端午/中秋主题好物折扣</p>
+            </div>
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1593807453992-0d2c7224d83e?w=300" alt="文化体验" style="width: 200px; height: 180px; object-fit: cover;">
+                <h4>文化体验专区</h4>
+                <p>DIY剪纸/茶艺体验套装</p>
+            </div>
+        </div>
     </div>
 
-    <div class="publication">
-        <strong>Local and global self-attention enhanced graph convolutional network for skeleton-based action recognition</strong><br>
-        <em>Pattern Recognition, 2025, 159: 111106</em><br>
-        <!-- 请替换为真实的论文链接和代码链接 -->
-        <a href="paper-url" target="_blank">Paper</a> | <a href="code-url" target="_blank">Code</a>
+    <!-- 商品展示区 -->
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1613386777414-5c3a64a4303a?w=600" alt="汉服">
+            <div style="padding: 16px;">
+                <h4>唐制汉服女款</h4>
+                <p>传统纹样，复刻盛唐风华</p>
+                <p style="color: #de2910; font-weight: bold;">¥298</p>
+                <p style="font-size: 12px; color: #999;">非遗工艺制作</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1598130272302-734320a70c4a?w=600" alt="剪纸">
+            <div style="padding: 16px;">
+                <h4>手工剪纸摆件</h4>
+                <p>非遗传承人原创作品</p>
+                <p style="color: #de2910; font-weight: bold;">¥88</p>
+                <p style="font-size: 12px; color: #999;">限量发售</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1592689130074-4d86e9c4c6c6?w=600" alt="茶具">
+            <div style="padding: 16px;">
+                <h4>宜兴紫砂茶具</h4>
+                <p>手工雕刻，品茗雅器</p>
+                <p style="color: #de2910; font-weight: bold;">¥588</p>
+                <p style="font-size: 12px; color: #999;">传统工艺认证</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1598040192928-0d83917d5194?w=600" alt="刺绣">
+            <div style="padding: 16px;">
+                <h4>苏绣刺绣屏风</h4>
+                <p>一针一线绣出东方美学</p>
+                <p style="color: #de2910; font-weight: bold;">¥1280</p>
+                <p style="font-size: 12px; color: #999;">非遗大师作品</p>
+            </div>
+        </div>
     </div>
 
-
-    <div class="publication">
-        <strong>Local and global self-attention enhanced graph convolutional network for skeleton-based action recognition</strong><br>
-        <em>Pattern Recognition, 2025, 159: 111106</em><br>
-        <!-- 请替换为真实的论文链接和代码链接 -->
-        <a href="paper-url" target="_blank">Paper</a> | <a href="code-url" target="_blank">Code</a>
+    <!-- 底部导航 -->
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 12px 0;">
+        <div>
+            <img src="https://via.placeholder.com/24" alt="首页">
+            <span>首页</span>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/24" alt="文化课堂">
+            <span>文化课堂</span>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/24" alt="消息">
+            <span>消息</span>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/24" alt="购物车">
+            <span>购物车</span>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/24" alt="我的">
+            <span>我的文化库</span>
+        </div>
     </div>
-
-    <!-- 学术服务 -->
-    <h2>🎓 Academic Service</h2>
-    <p>
-        Journal Reviewer: IEEE T-PAMI, CVPR, IJCV<br>
-        Research Projects: 主持国家自然科学基金项目、省级重点研发计划项目
-    </p>
-
-    <!-- 荣誉奖项 -->
-    <h2>🏆 Awards</h2>
-    <p>2024年：安徽省优秀研究生导师</p>
 </body>
-
-</html>    
+</html>
