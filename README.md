@@ -1,9 +1,9 @@
-![个人照片](https://github.com/2563610544/xianweiding.github.io/raw/802d590e7fe03000732278fbc7ce4902b97a73f3/sample-figure2.png)  <!-- 替换为你的照片路径，支持网络图片URL -->
+![个人照片](https://github.com/2563610544/xianweiding.github.io/raw/ef5eda1c0d4a2d60df89fe1ba8beff2569a61449/figure7.png)  <!-- 替换为你的照片路径，支持网络图片URL -->
 
 # 你的姓名  
 **Professor**  
 School of 你的学院, 你的大学  
-Email: your_email@example.com  
+Email: xianweiding_email@example.com  
 [GitHub](https://github.com/yourgithub) | [Google Scholar](https://scholar.google.com) | [DBLP](https://dblp.org)  
 
 ## ◆ About Me  
